@@ -1,0 +1,15 @@
+xizoahub-code/
+│ index.html
+│ sw.js
+│ manifest.json
+│
+├── css/
+│     └── style.css
+│
+├── js/
+│     ├── app.js
+│     ├── storage.js
+│     └── config.js
+│
+└── assets/
+      └── favicon.png
