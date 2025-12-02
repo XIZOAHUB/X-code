@@ -1,0 +1,43 @@
+:root{
+  --bg:#0f1115;
+  --panel:#121316;
+  --muted:#9aa3b2;
+  --accent:#00f3ff;
+  --accent2:#bc13fe;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:#e6eef6;font-family:Inter,Segoe UI,system-ui,Roboto,monospace}
+.centered{display:flex;align-items:center;justify-content:center;height:100vh}
+.card{background:var(--panel);padding:28px;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,0.6);width:360px;text-align:center}
+.card h1{margin:0 0 6px;font-size:22px;color:var(--accent)}
+.card .muted{color:var(--muted);margin-bottom:12px}
+.card input{width:100%;padding:10px;border-radius:6px;border:1px solid #222;background:#0b0b0c;color:#fff;margin-bottom:12px}
+.controls{display:flex;gap:8px;justify-content:center}
+.controls button{padding:8px 12px;border-radius:6px;border:none;cursor:pointer;background:var(--accent2);color:#fff;font-weight:600}
+.controls button[title="Use demo project"]{background:#333;color:#fff}
+
+.hidden{display:none}
+
+/* App layout */
+header{display:flex;justify-content:space-between;align-items:center;padding:10px 18px;background:linear-gradient(90deg,#0b0b0d, #0f1115);border-bottom:1px solid #0a0a0a}
+.brand{font-weight:700;font-size:16px}
+.brand .tag{font-size:11px;margin-left:8px;color:var(--muted);font-weight:500}
+.actions button{margin-left:8px;padding:8px 12px;border-radius:6px;border:none;background:#16171b;color:#fff;cursor:pointer}
+main{display:flex;height:calc(100vh - 106px)}
+aside#explorer{width:260px;background:#0b0b0d;border-right:1px solid #111;padding:10px;overflow:auto}
+.explorer-header{font-size:12px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.file-list .file{padding:8px;border-radius:6px;margin-bottom:6px;background:#0d0d0f;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.file-list .file.active{background:#17171a}
+.tabs{display:flex;gap:6px;padding:8px;background:#0d0d0f;border-bottom:1px solid #0a0a0a;overflow:auto}
+.tab{padding:6px 10px;background:#0f0f11;border-radius:6px;color:var(--muted);cursor:pointer}
+.tab.active{background:#141416;color:#fff;border:1px solid #222}
+.editor{flex:1;min-width:300px;background:#111114}
+.previewArea{width:480px;background:#fff;display:flex;flex-direction:column}
+.preview-header{background:#0d0d0f;padding:8px;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.previewArea iframe{flex:1;border:none}
+footer{height:40px;padding:8px 16px;background:#080809;border-top:1px solid #000;color:var(--muted)}
+#status{font-size:13px}
+@media(max-width:900px){
+  aside#explorer{display:none}
+  .previewArea{display:none}
+}
